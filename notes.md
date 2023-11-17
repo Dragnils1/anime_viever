@@ -16,3 +16,9 @@
 https://radioprog.ru/post/124
 
 //TODO доделать devcontainer.json 
+
+for non-root user do:
+https://code-visualstudio-com.translate.goog/remote/advancedcontainers/add-nonroot-user?_x_tr_sl=auto&_x_tr_tl=ru&_x_tr_hl=ru
+
+как работаьть с несколькими контейнерами одновременно, например с фронтендом и бекэндом?
+как не пересобирать контейнер каждый раз, когда обновляются зависимости в npm или может быть можно пересобрать только один контейнер (просто уточнить команду)?

@@ -17,13 +17,16 @@
 	// The optional 'workspaceFolder' property is the path VS Code should open by default when
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-	"mounts": [{ "source": "${localWorkspaceFolder}", "target": "/workspaces", "type": "bind" }],
+	"mounts": [{ "source": "${localWorkspaceFolder}", "target": "/client", "type": "bind" },
+				{ "source": "${localWorkspaceFolder}", "target": "/api", "type": "bind" }],
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally. 	
 	"forwardPorts": [3000, 4000, 3307, 8077],
+	"runServices": ["mysqldb", "client", "api", "phpmyadmin"],
+	"shutdownAction": "stopCompose",
 
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
 	// "runServices": [],
@@ -38,5 +41,6 @@
 	// "customizations": {},
 
 	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
-	"remoteUser": "anime_viever"
+	"remoteUser": "root"
+	//TODO create non-root user
 }
