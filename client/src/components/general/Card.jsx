@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
-export default function Card({title, rating, cost, link_to, link_title}) {
+export default function Card({title, img_src, rating, cost, link_to, link_title}) {
   console.log("🚀 ~ file: Card.jsx:4 ~ Card ~ rating:", rating)
   const [ratingArr, setratingArr] = useState((Array (Number(5))).fill(0))
   return (
     
 
-<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-        <img class="p-8 rounded-t-lg" src="/docs/images/products/apple-watch.png" alt="product image" />
+<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 inline-block">
+    <a href={link_to}>
+        <img class="p-8 rounded-t-lg" src={img_src} alt="product image" title="Нажми чтобы открыть аниме" />
     </a>
     <div class="px-5 pb-5">
         <a href="#">
